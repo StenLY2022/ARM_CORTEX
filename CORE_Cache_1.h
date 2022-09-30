@@ -374,7 +374,7 @@ __STATIC_FORCEINLINE void SCB_CleanInvalidateDCache_by_Addr (uint32_t *addr, int
         SCB->DCCIMVAC = op_addr;            /* register accepts only 32byte aligned values, only bits 31..5 are valid */
         op_addr +=          __SCB_DCACHE_LINE_SIZE;
         op_size -=          __SCB_DCACHE_LINE_SIZE;
-      } while ( op_size > 0 );
+      } while ( op_size > 0 );;
 
       __DSB();
       __ISB();
